@@ -1,0 +1,357 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+input::-ms-clear{
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+a{
+  color: #000;
+}
+button::-moz-focus-inner{
+  padding: 0;
+  border: 0;
+}
+
+hr{
+  border: 0;
+  margin: 40px 0;
+  display: block;
+  background-color: #000;
+
+  width: 100%;
+  height: 1px;
+}
+
+/*Body*/
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background-color: #0D0C0C;
+  overflow-x: hidden;
+  padding-right: 9px;
+}
+
+/*Slider*/
+::-webkit-scrollbar {
+  width: 9px; /* ширина для вертикального скролла */
+  height: auto; /* высота для горизонтального скролла */
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E9F8EA;
+  border-radius: 10px;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1440px;
+  padding: 0px 0px;
+  margin: 0 auto;
+}
+
+/*settings*/
+.settings{
+  height: 100vh;
+  padding: 10px;
+  background-color: #0A0909;
+  width: 400px;
+  max-width: 38vw;
+  position: fixed;
+  left: 0px;
+}
+
+.forma__subject{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.forma__input{
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #0D0C0C;
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.forma__input::placeholder{
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.4;
+}
+
+.radio-button__inner{
+  display: block;
+  text-align: center;
+}
+
+.radio-button__inner:not(:last-child){
+  margin-right: 10px;
+}
+
+.count__text{
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.radio-button{
+  height: 40px ;
+}
+
+.count-day__input{
+  background-color: #0D0C0C;
+  border-radius: 5px;
+  padding: 10px;
+  height: 40px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.count-day__input::placeholder{
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.4;
+}
+
+/*Custom Radio-Button*/
+.radio-button__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-button {
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  border-radius: 50%;
+  transition: .4s ease-in-out;
+}
+
+.radio-button:hover {
+  scale: 1.2;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.circle {
+  position: relative;
+  top: -20px;
+  left: 7px;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: rgb(255, 153, 0);;
+  scale: 0;
+  border-radius: 10px;
+  transition: .4s ease-in-out;
+}
+
+.radio-button:checked {
+  box-shadow: none;
+  border: 1px solid rgb(255, 153, 0);;
+}
+
+.radio-button:checked + .circle {
+  transform: rotate(360deg);
+  scale: 1;
+}
+
+/*Button*/
+.button{
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0D0C0C;
+  border-radius: 5px;
+  padding: 15px 30px;
+  transition: all .1s linear;
+}
+
+.button:hover{
+  background: #181717;
+}
+
+.create__task-button{
+  position: absolute;
+  width: 220px;
+  bottom: 0;
+  left: 50%;
+  transform:translate(-50%, -50%);
+}
+
+.create__task-button:hover{
+  background-color: #151414;
+}
+
+.task-item{
+  position: relative;
+}
+
+.delete-task__button{
+  position: absolute;
+  right: 70px;
+  top: 4px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #0A0909;
+  font-weight: 600;
+  float: right;
+}
+
+/*task shell*/
+.task-shell{
+  height: 100%;
+  padding: 10px;
+  background-color: #0D0C0C;
+  position: absolute;
+  width: 70vw;
+  right: 0px;
+}
+
+.task-item{
+  margin-bottom: 50px;
+}
+
+.task-item__subject{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.task-item__subject{
+  cursor: pointer;
+}
+
+.task-item__wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 38px);
+  gap: 6px;
+  background-color: #0A0909;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.task-item__ceill{
+  text-align: center;
+  font-size: 12px;
+}
+
+.select-day{
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.task-item__ceill:not(:last-child){
+  margin-right: 6px;
+}
+
+/*CheckBox*/
+.checkbox {
+  appearance: none;
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox::before {
+  position: absolute;
+  bottom: -4px;
+  left: 1px;
+  content: "✔";
+  font-size: 40px;
+  color: rgb(255, 153, 0);
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox:checked::before {
+  animation: zoom 0.5s ease-in-out;
+  transform: scale(1);
+}
+
+
+/*Anim*/
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1.5);
+  }
+
+  40% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.2);
+  }
+
+  90% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

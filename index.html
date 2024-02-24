@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="js/app.js" defer></script>
+
+  <title>Discipline</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="settings">
+      <form class="form" action="">
+        <h1 class="forma__subject">Задание</h1>
+        <input class="forma__input" type="text" id="task-text" placeholder="Текст задания..." required>
+
+        <h1 class="forma__subject">Количество дней</h1>
+
+        <div class="radio-button__wrapper">
+          <div class="radio-button__inner">
+            <input class="radio-button" id="7" value="7" type="radio" name="days">
+            <div class="circle"></div>
+            <p class="count__text">7</p>
+          </div>
+
+          <div class="radio-button__inner">
+            <input class="radio-button" id="14" value="14" type="radio" name="days" checked>
+            <div class="circle"></div>
+            <p class="count__text">14</p>
+          </div>
+
+          <div class="radio-button__inner">
+            <input class="radio-button" id="30" value="30" type="radio" name="days">
+            <div class="circle"></div>
+            <p class="count__text">30</p>
+          </div>
+
+          <div class="radio-button__inner">
+            <input class="count-day__input" type="number" placeholder="16">
+            <p class="count__text">Свое количество</p>
+          </div>
+        </div>  
+
+        <button type="submit" class="create__task-button button">Создать задачу</button>
+      </form>
+    </div>
+
+    <div class="task-shell">
+      <ul class="task-list">
+        
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
